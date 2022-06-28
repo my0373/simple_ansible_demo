@@ -1,7 +1,6 @@
 ---
 - name: generate user with random hashed password, store passwords in local files named 'password-(first-name) playbook'
   hosts: all
-  user: lukerenwick
   vars_files:
     - users.yml
   tasks:
