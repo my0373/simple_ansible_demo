@@ -7,7 +7,7 @@
     - name: User task
       user:
         name: "{{ item.name }}"
-        password: "{{ lookup('password', 'Password-' + item.first + ' length=6') | password_hash('sha512') }}"
+        password: password
         comment: "{{ item.first + ' ' + item.middle + ' ' + item.last }}"
         state: present
         uid: "{{ item.uid }}"
