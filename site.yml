@@ -7,7 +7,7 @@
     - name: User task
       user:
         name: "{{ item.name }}"
-        password: "password"
+        password: {{ "password" | password_hash('sha512') }}
         comment: "{{ item.first + ' ' + item.middle + ' ' + item.last }}"
         state: present
         uid: "{{ item.uid }}"
