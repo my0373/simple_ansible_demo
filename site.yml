@@ -11,4 +11,4 @@
         comment: "{{ item.first + ' ' + item.middle + ' ' + item.last }}"
         state: present
         uid: "{{ item.uid }}"
-        loop: "{{ users }}"
+      loop: "{{ users }}"
