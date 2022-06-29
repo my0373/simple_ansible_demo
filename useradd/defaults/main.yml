@@ -1,3 +1,5 @@
+---
+# defaults file for useradd
 users:
 - name: starwars
   first: Obi

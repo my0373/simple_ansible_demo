@@ -1,0 +1,56 @@
+
+- name: Install apache packages 
+  yum:
+    name: httpd
+    state: present
+- name: ensure httpd is running
+  service:
+    name: httpd 
+    state: started
+
+# - template:
+#     src: blog/blog.css
+#     dest: /var/www/html/
+#     owner: root
+#     group: wheel
+#     mode: 0644
+
+# - template:
+#     src: blog/blog.rtl.css
+#     dest: /var/www/html/
+#     owner: root
+#     group: wheel
+#     mode: 0644
+
+
+# - template:
+#     src: blog/index.html
+#     dest: /var/www/html/
+#     owner: root
+#     group: wheel
+#     mode: 0644
+
+# - name: ensure firewalld has stopped
+#   service:
+#     name: firewalld 
+#     state: stopped
+
+# - name: Open the firewall rules (http)
+#   firewalld:
+#     service: http
+#     permanent: yes
+#     state: enabled
+#   notify: 
+#     - restart httpd
+#     - restart firewalld
+
+# - name: Open the firewall rules (https)
+#   firewalld:
+#     service: https
+#     permanent: yes
+#     state: enabled
+#   notify: 
+#     - restart httpd
+#     - restart firewalld
+    
+
